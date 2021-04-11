@@ -13,15 +13,15 @@ InstagramtoFacebook = driver.find_element_by_xpath("/html/body/div[1]/section/ma
 InstagramtoFacebook.click()
 
 driver.find_element_by_xpath("/html/body/div[1]/div[3]/div[1]/div/div/div[2]/div[1]/form/div/div[1]/input")\
-    .send_keys("yusuf_23_2000@hotmail.com")
+    .send_keys("your e-mail")
 driver.find_element_by_xpath("/html/body/div[1]/div[3]/div[1]/div/div/div[2]/div[1]/form/div/div[2]/input")\
-    .send_keys("güneşibeklerken")
+    .send_keys("yout password")
 driver.find_element_by_xpath("/html/body/div[1]/div[3]/div[1]/div/div/div[2]/div[1]/form/div/div[3]/button")\
     .click()
 sleep(10)
 
 # go to account page
-driver.get("https://www.instagram.com/yusuf_gb/")
+driver.get("https://www.instagram.com/your_account/")	# your account name will place instead of your_account
 sleep(2)
 
 driver.find_element_by_xpath("/html/body/div[1]/section/main/div/header/section/ul/li[2]/a").click()
@@ -48,7 +48,6 @@ followerss = driver.find_elements_by_css_selector(".FPmhX.notranslate._0imsa")
 followers = []
 for follower in followerss:
     followers += [follower.text]
-    #print(str(sayac)+" --> "+ follower.text)
 sleep(5)
 driver.refresh()
 
@@ -77,4 +76,4 @@ for following in followings:
         if following.text == follower:
             control += 1
     if(control == 0):
-        print("Takip etmeyen..:" + following.text)
+        print("Not Following Back..:" + following.text)
