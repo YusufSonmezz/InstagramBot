@@ -21,7 +21,7 @@ driver.find_element_by_xpath("/html/body/div[1]/div[3]/div[1]/div/div/div[2]/div
 sleep(10)
 
 # go to account page
-driver.get("https://www.instagram.com/your_account/")	# your account name will place instead of your_account
+driver.get("https://www.instagram.com/your_account/")	# your account name will replace your_account
 sleep(2)
 
 driver.find_element_by_xpath("/html/body/div[1]/section/main/div/header/section/ul/li[2]/a").click()
